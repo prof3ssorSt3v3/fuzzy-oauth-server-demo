@@ -1,5 +1,5 @@
-import GoogleStrategy from 'passport-google-oauth20';
-import BearerStrategy from 'passport-http-bearer';
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
+import { Strategy as BearerStrategy } from 'passport-http-bearer';
 import passport from 'passport';
 import jwt from 'jsonwebtoken';
 import { createSession, verifySession } from '../db/sessions.js';

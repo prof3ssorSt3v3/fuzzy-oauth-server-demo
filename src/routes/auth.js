@@ -11,7 +11,7 @@ authRouter.get('/login', (req, res, next) => {
 
   // we will encode our url in a json object, similar to a json token (not signed!)
   const state = redirect_url ? Buffer.from(JSON.stringify({ redirect_url })).toString('base64') : undefined;
-  req.state = state;
+  // req.state = state;
   // we can pass `req`, `res`, and `next` into the middleware function like this,
   // allowing us to pass extra data from the request
   // return passport.authenticate('google', { scope: ['profile'] });
