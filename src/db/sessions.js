@@ -3,7 +3,7 @@ import { sessions } from './schema.js';
 import { eq, asc, desc } from 'drizzle-orm';
 
 const createSession = async (user) => {
-  console.log(user);
+  console.log(`insert session ${user.avatar}`);
   const { googleId: google_id, email, name, avatar } = user;
   return await db.insert(sessions).values({ google_id, email, name, avatar }).returning();
 };

@@ -20,7 +20,7 @@ passport.use(
         googleId: profile.id,
         email: profile.emails[0].value,
         name: profile.displayName,
-        avatar: profile.photos[0]?.value,
+        avatar: profile.photos[0].value,
       };
       // create sessions entry
       const u = await createSession(user);
